@@ -2,10 +2,10 @@ package com.trycloud.step_definitions;
 
 import com.github.javafaker.Faker;
 import com.trycloud.pages.FilesPage;
-import com.trycloud.utilities.Driver;
+
 import io.cucumber.java.en.*;
 import org.junit.Assert;
-import org.openqa.selenium.By;
+
 
 public class US7_ManagingFolders_StepDefs {
 

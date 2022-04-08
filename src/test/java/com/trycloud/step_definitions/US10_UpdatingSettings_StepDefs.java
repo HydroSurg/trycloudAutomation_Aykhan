@@ -1,7 +1,6 @@
 package com.trycloud.step_definitions;
 
 import com.trycloud.pages.FilesPage;
-import com.trycloud.utilities.BrowserUtils_Gurhans;
 import com.trycloud.utilities.Driver;
 import io.cucumber.java.en.*;
 import org.junit.Assert;

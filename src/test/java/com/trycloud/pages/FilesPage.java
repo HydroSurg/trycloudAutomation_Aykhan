@@ -3,6 +3,7 @@ package com.trycloud.pages;
 import com.github.javafaker.Faker;
 import com.trycloud.utilities.BrowserUtils_Gurhans;
 import com.trycloud.utilities.Driver;
+import org.junit.Assert;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -11,6 +12,7 @@ import org.openqa.selenium.support.PageFactory;
 
 import java.util.Iterator;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 public class FilesPage {
 
@@ -73,6 +75,31 @@ public class FilesPage {
     public WebElement uploadedFile(String fileName){
         WebElement uploadedFile = Driver.getDriver().findElement(By.xpath("//span[.='" + fileName + "']"));
         return uploadedFile;
+    }
+
+    String systemPath = System.getProperty("user.dir");
+    public static String fileName;
+    public void uploadFile(){
+        String filePath = systemPath + "/src/test/resources/files/What-is-Cloud-Storage.png";
+                //"/Users/aykhanguluzade/Desktop/Map_ClassNotes.png";
+        uploadStart.sendKeys(filePath);
+        BrowserUtils_Gurhans.waitFor(5);
+        fileName = filePath.substring(filePath.lastIndexOf("/")+1);
+        // System.out.println("fileName = " + fileName);
+
+        // Check if upload failed due to Not Enough Space and retry
+        try{
+            Driver.getDriver().manage().timeouts().implicitlyWait(0, TimeUnit.SECONDS);
+            Assert.assertTrue(notEnoughSpaceBtn.isDisplayed());
+            notEnoughSpaceBtn.click();
+            BrowserUtils_Gurhans.sleep(1);
+            uploadStart.sendKeys(filePath);
+            // TryCloudUtils.waitTillUploadBarDisappears();
+            BrowserUtils_Gurhans.waitFor(3);
+        } catch (Exception e){
+            Driver.getDriver().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+            // TryCloudUtils.waitTillUploadBarDisappears();
+        }
     }
 
     @FindBy(xpath = "(//div[contains(@style,'filetypes/folder')])[1]")

@@ -1,4 +1,4 @@
-
+@US7
 Feature: As a user, I should be able to remove files from the favorites and upload a file directly
   Story: As a user, I should be able to manage folders.
 

@@ -12,7 +12,10 @@ import org.junit.runner.RunWith;
                 "pretty",
                 "html:target/cucumber-reports.html",
                 "rerun:target/rerun.txt",
-                "me.jvt.cucumber.report.PrettyReports:target"
+                "me.jvt.cucumber.report.PrettyReports:target",
+                "json:target/cucumber.json",
+                "html:target/cucumber/report.html",
+                "junit:target/junit/junit-report.xml",
         },
         features = "src/test/resources/features",
         glue = "com/trycloud/step_definitions",

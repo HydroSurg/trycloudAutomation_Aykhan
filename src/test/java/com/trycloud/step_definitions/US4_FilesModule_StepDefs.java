@@ -3,7 +3,7 @@ package com.trycloud.step_definitions;
 import com.trycloud.pages.BasePage;
 import com.trycloud.pages.DashboardPage;
 import com.trycloud.pages.FilesModulePage;
-import com.trycloud.utilities.BrowserUtils_Gurhans;
+
 import io.cucumber.java.en.*;
 import org.junit.Assert;
 

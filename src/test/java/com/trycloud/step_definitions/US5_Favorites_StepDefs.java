@@ -1,6 +1,6 @@
 package com.trycloud.step_definitions;
 
-import com.github.javafaker.Faker;
+
 import com.trycloud.pages.DashboardPage;
 import com.trycloud.pages.FilesPage;
 import com.trycloud.utilities.BrowserUtils_Gurhans;
@@ -8,7 +8,7 @@ import com.trycloud.utilities.Driver;
 import io.cucumber.java.en.*;
 import org.junit.Assert;
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+
 
 public class US5_Favorites_StepDefs {
 

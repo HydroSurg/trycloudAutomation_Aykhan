@@ -5,7 +5,11 @@ Feature: As a user, I should be able to update settings
     Given user on the login page
     When the users log in with valid credentials
 
-
+  Scenario: Verify users update settings
+    Given user on the dashboard page
+    When the user clicks the "Files" module
+    And user clicks Settings on the left bottom corner
+    Then the user should be able to click any buttons
 
   @wip
   Scenario: Verify users to see the app storage usage

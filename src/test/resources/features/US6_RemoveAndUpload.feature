@@ -17,7 +17,7 @@ Feature: As a user, I should be able to remove files from favorites and upload a
     Then Verify that the file is removed from the Favorites sub-module’s table
 
 
-
+@wip2
   Scenario: verify users to upload a file from Files
     Given user on the dashboard page
     When the user clicks the "Files" module

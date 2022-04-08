@@ -6,7 +6,7 @@ Feature: As a user, I should be able to access to Files module - Favorites butto
     Given user on the login page
     When the users log in with valid credentials
 
-@wip2
+
   Scenario: Verify users to add files to Favorites
     Given user on the dashboard page
     When the user clicks the "Files" module

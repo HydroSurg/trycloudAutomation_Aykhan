@@ -1,3 +1,4 @@
+@US1 @US2
 Feature: As a user, I should be able to log in.
 
   Background:

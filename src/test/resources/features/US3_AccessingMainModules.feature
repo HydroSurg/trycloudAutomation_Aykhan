@@ -1,3 +1,4 @@
+@US3
 Feature: As a user, I should be accessing all the main modules of the app.
   Story: As a user, I should be accessing all the main modules of the app.
 

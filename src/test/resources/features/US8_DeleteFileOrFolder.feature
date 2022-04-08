@@ -1,3 +1,4 @@
+@US8
 Feature: As a user, I should be able to delete a file/folder.
   Story: As a user, I should be able to delete a file/folder.
 
